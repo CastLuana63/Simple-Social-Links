@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Links | CastLuana</title>
+</head>
+
+<body>
+    <!-- inicio: 19-07-24, 14:15
+fim: 20-07-24, 14:15 -->
+    <div class="container" id="container">
+        <div id="btn">
+            <i class="indicator"></i>
+        </div>
+        <div class="card">
+            <div class="profile">
+                <img src="avarona.jpg" alt="perfil">
+            </div>
+            <div class="info">
+                <span>Avarona Gaveston</span>
+                <h4>Born in United States</h4>
+                <p>| Front-End & Back-End developer |</p>
+            </div>
+            <div class="link">
+                <div class="link-item"><a href="">Portifólio</a></div>
+                <div class="link-item"><a href="">GitHub</a></div>
+                <div class="link-item"><a href="">LinkedIn</a></div>
+                <div class="link-item"><a href="">Twitter</a></div>
+                <div class="link-item"><a href="">Instagram</a></div>
+            </div>
+        </div>
+        <div class="copyright">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> |
+            Coded by <a href="#">CastLuana</a>
+        </div>
+    </div>
+    <script>
+        const lightMode = document.getElementById('container');
+        const btn = document.getElementById('btn');
+        btn.onclick = function () {
+            btn.classList.toggle('lightMode');
+            lightMode.classList.toggle('lightMode');
+        }
+    </script>
+</body>
+
+</html>

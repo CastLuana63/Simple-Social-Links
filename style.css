@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+}
+
+:root {
+    --darkBack1: #000000e8;
+    --darkBack2: #212121;
+    --darkBack3: #14FFEC;
+    --darkBack4: #3f3f3f;
+    --lightBack1: #E3FDFD;
+    --lightBack4: #A6E3E9;
+    --lightBack3: #71C9CE;
+    --lightBack2: #0D7377;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--darkBack1);
+    transition: all .5s ease;
+}
+
+.card {
+    width: 280px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    border-radius: 1rem;
+    background: var(--darkBack2);
+}
+
+.profile {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.profile img {
+    margin-top: 26px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.info {
+    width: 100%;
+    min-height: 90px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #EEEEEE;
+}
+
+.info h4 {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--darkBack3);
+}
+
+.info p {
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ccc;
+}
+
+.link {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.link .link-item {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .5s ease;
+    background: var(--darkBack4);
+}
+
+.link .link-item a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: all .5s ease;
+    color: var(--lightBack1);
+}
+
+.link .link-item:hover a {
+    color: var(--darkBack4);
+    font-size: 16px;
+}
+
+.link .link-item:hover {
+    background: var(--darkBack3);
+}
+
+.copyright {
+    position: fixed;
+    max-width: 470px;
+    bottom: 10px;
+    left: 10px;
+    color: var(--lightBack1);
+    font-size: 10px;
+}
+
+.copyright a {
+    color: var(--darkBack3);
+}
+
+/* LIGHTMODE */
+.lightMode {
+    background: var(--lightBack1);
+    transition: all .5s ease;
+}
+
+.lightMode .card {
+    background: var(--lightBack3);
+}
+
+.lightMode .info span {
+    color: var(--darkBack2);
+}
+
+.lightMode .card .info h4 {
+    color: var(--lightBack1);
+    font-weight: 600;
+}
+
+.lightMode .card .info p {
+    color: var(--darkBack2);
+}
+
+.lightMode .link .link-item {
+    background: var(--lightBack2);
+}
+
+.lightMode .link .link-item a {
+    color: var(--lightBack1);
+}
+
+.lightMode .link .link-item:hover a {
+    color: var(--darkBack1);
+    font-size: 16px;
+}
+
+.lightMode .link .link-item:hover {
+    background: var(--lightBack4);
+}
+
+.lightMode .copyright {
+    color: var(--lightBack1);
+}
+
+.lightMode .copyright {
+    color: var(--darkBack1);
+}
+
+.lightMode .copyright a {
+    color: var(--lightBack2);
+}
+
+/* BUTTON DARK AND LIGHT MODE */
+#btn {
+    position: fixed;
+    display: block;
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    background: var(--darkBack4);
+    top: 20px;
+    left: 30px;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.5),
+        inset 0 4px 4px rgba(0, 0, 0, 0.2),
+        inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+#btn .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom, #3f3f3f, #212121);
+    border-radius: 50%;
+    transform: scale(0.8);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1),
+        inset 0 2px 4px rgba(255, 254, 255, 0.2),
+        inset 0 -2px 4px rgba(255, 254, 255, 0.2);
+    transition: .5s;
+}
+
+.lightMode#btn {
+    background: var(--lightBack1);
+    box-shadow: inset 0 6px 4px rgba(0, 0, 0, 0.05),
+        inset 0 2px 4px rgba(0, 0, 0, 0.05),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#btn.lightMode .indicator {
+    left: 40px;
+    background: linear-gradient(to bottom, #E3FDFD, #71C9CE);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+        inset 0 2px 2px rgba(255, 254, 255, 1),
+        inset 0 -2px 2px rgba(255, 254, 255, 1);
+}
